@@ -14,7 +14,7 @@ public class BetriebsstellenController {
             path = "/betriebsstelle/{id}",
             produces = MediaType.APPLICATION_JSON_VALUE
     )
-    public Betriebsstelle HalloWelt(@PathVariable(name = "id") String code){
+    public Betriebsstelle getBetriebsstelle (@PathVariable(name = "id") String code){
         Betriebsstelle angefragteBetriebsstelle = null;
         System.out.println(code);
         for (Betriebsstelle b : CaseStudyApplication.betriebsstellen) {
